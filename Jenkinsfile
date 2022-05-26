@@ -17,7 +17,7 @@ node {
                         //sh "git switch master"
                         bat "whoami"
                         bat "more deployment.yaml"
-                        bat "powershell -Command "(gc deployment.yaml) -replace 'vignesh0590/gitops.*', 'vignesh0590/gitops:${DOCKERTAG}' | Out-File -encoding ASCII deployment.yaml"
+                        bat "powershell.exe -Command "(gc deployment.yaml) -replace 'vignesh0590/gitops.*', 'vignesh0590/gitops:${DOCKERTAG}' | Out-File -encoding ASCII deployment.yaml"
                         bat "more deployment.yaml"
                         bat "git add ."
                         bat "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
