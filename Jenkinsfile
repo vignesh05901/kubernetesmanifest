@@ -16,7 +16,7 @@ node {
                         bat "git config user.name vignesh05901"
                         //sh "git switch master"
                         bat "more deployment.yaml"
-                        bat "wsl ls -la"
+                        bat "wsl.exe ls -la"
                         bat "wsl whoami"
                         bat "wsl sudo sed -i 's+vignesh0590/gitops.*+vignesh0590/gitops:${DOCKERTAG}+g' deployment.yaml"
                         bat "more deployment.yaml"
